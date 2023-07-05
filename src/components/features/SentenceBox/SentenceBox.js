@@ -17,9 +17,9 @@ import {
 import useLocalPersistState from "../../../hooks/useLocalPersistState";
 import {
   ENGLISH_MODE,
-  CHINESE_MODE,
+
   ENGLISH_SENTENCE_MODE_TOOLTIP_TITLE,
-  CHINESE_SENTENCE_MODE_TOOLTIP_TITLE,
+
 } from "../../../constants/Constants";
 import { Tooltip } from "@mui/material";
 import { Dialog } from "@mui/material";
@@ -398,19 +398,6 @@ const SentenceBox = ({
                         className={getLanguageButtonClassName(ENGLISH_MODE)}
                       >
                         eng
-                      </span>
-                    </Tooltip>
-                  </IconButton>
-                  <IconButton
-                    onClick={() => {
-                      reset(sentencesCountConstant, CHINESE_MODE, false);
-                    }}
-                  >
-                    <Tooltip title={CHINESE_SENTENCE_MODE_TOOLTIP_TITLE}>
-                      <span
-                        className={getLanguageButtonClassName(CHINESE_MODE)}
-                      >
-                        chn
                       </span>
                     </Tooltip>
                   </IconButton>

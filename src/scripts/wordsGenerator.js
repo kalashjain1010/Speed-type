@@ -1,13 +1,12 @@
 import randomWords from "random-words";
 import {
   COMMON_WORDS,
-  COMMON_CHINESE_WORDS,
-  COMMON_CHINESE_IDIOMS_WORDS,
+ 
 } from "../constants/WordsMostCommon";
 import {
   DEFAULT_DIFFICULTY,
   ENGLISH_MODE,
-  CHINESE_MODE,
+
   DEFAULT_WORDS_COUNT,
 } from "../constants/Constants";
 import { randomIntFromRange } from "./randomUtils";
@@ -33,32 +32,6 @@ const wordsGenerator = (wordsCount, difficulty, languageMode) => {
   return ["something", "went", "wrong"];
 };
 
-const chineseWordsGenerator = ( difficulty, languageMode) => {
-  if (languageMode === CHINESE_MODE) {
-    if (difficulty === DEFAULT_DIFFICULTY){
-      const ChineseWordList = [];
-      for (let i = 0; i < DEFAULT_WORDS_COUNT; i++) {
-        const rand = randomIntFromRange(0, 5000);
-        if (COMMON_CHINESE_WORDS[rand] && COMMON_CHINESE_WORDS[rand].val){
-          ChineseWordList.push(COMMON_CHINESE_WORDS[rand]);
-        }
-      }
-  
-      return ChineseWordList;
-    }
-
-    const ChineseIdiomsList = [];
-    for (let i = 0; i < DEFAULT_WORDS_COUNT; i++) {
-      const rand = randomIntFromRange(0, 5000);
-      if (COMMON_CHINESE_IDIOMS_WORDS[rand] && COMMON_CHINESE_IDIOMS_WORDS[rand].val){
-        ChineseIdiomsList.push(COMMON_CHINESE_IDIOMS_WORDS[rand]);
-      }
-    }
-
-    return ChineseIdiomsList;
-
-  }
-};
 
 const wordsCardVocabGenerator = (vocabSource, chapter) => {
   const wordsList = [];
@@ -71,4 +44,4 @@ const wordsCardVocabGenerator = (vocabSource, chapter) => {
   return wordsList;
 }
 
-export { wordsGenerator, chineseWordsGenerator, wordsCardVocabGenerator};
+export { wordsGenerator,  wordsCardVocabGenerator};
