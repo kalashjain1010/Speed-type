@@ -9,7 +9,7 @@ challenges to cater to different skill levels.
 
 ## Tech Stack
 
-**Client:** React, Redux, TailwindCSS
+**Client:** React, Redux, TailwindCSS , NodeJS
 
 
 
@@ -19,8 +19,13 @@ challenges to cater to different skill levels.
 Install speed-types with npm
 
 ```bash
-  npm install speed-typest
   cd speed-types
+  npm install --force
+```
+
+## Run
+```
+  npm start
 ```
     
 ## Demo
